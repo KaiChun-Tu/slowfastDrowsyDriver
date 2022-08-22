@@ -86,6 +86,6 @@ YawDD Dataset
 
 # Weight
 The weight is in https://turing.DSmyNAS.com:5001/sharing/oWmmkgpzy
-Please modify the code according to the > Code below1
+Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/slowfastDrowsyDriver/blob/main/README.md#code) below1
 
 # Code
