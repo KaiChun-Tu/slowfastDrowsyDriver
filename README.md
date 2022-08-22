@@ -52,8 +52,14 @@ Each dataset has two folders.
 * Clip folder: a folder that stores each data, each folder contains eight images and video files of the data
 ## Dataset Name
 Our night dataset  
-   CSV folder：new_night  
-   Clip folder：clip  
+* CSV folder：new_night  
+* Clip folder：clip  
+
 Our dynamic night dataset  
-   CSV folder：dynamicNight  
-   Clip folder：dynamicNight_clip  
+* CSV folder：dynamicNight  
+* Clip folder：dynamicNight_clip  
+
+Our daytime dataset 
+* CSV folder：new_daytime
+* Clip folder：new_daytime_clip
+
