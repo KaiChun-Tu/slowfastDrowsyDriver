@@ -107,7 +107,7 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
 ## YawDD dataset
 * ECA - Spatial attention using Unbalanced LocalCNNs, channel attention convolution in Unbalanced LocalCNNs using ECA
 
-# Command
+# Commend
 ## Train
     python tools/run_net.py \
     --cfg configs/Kinetics/SLOWFAST_8x8_R50.yaml \
@@ -133,12 +133,12 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     self.LocalCNNs5 = LocalCNNs(2048)
     
     #line 470
-    x5 = self.LocalCNNs5(x5) cancel command
+    x5 = self.LocalCNNs5(x5) uncomment
     
     #comfire 479
     TimeAveX = x[0]
     
-    #confire command line 503 
+    #confire commend line 503 
     #if imgType == 'IR' :
         #x = self.s1Night(x)
     #else :
@@ -158,7 +158,7 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     #confire line 608
     TimeAveX = x[1]
     
-        #confire command line 503 
+    #confire commend line 503 
     #if imgType == 'IR' :
         #x = self.s1Night(x)
     #else :
@@ -168,7 +168,7 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     x = self.s1(x)
 
 ## Attention Augmented
-    #/slowfast/models/resnet_helper.py Remember to command locolCNNs or Unbalanced LocalCNNs
+    #/slowfast/models/resnet_helper.py Remember to commend locolCNNs or Unbalanced LocalCNNs
     #uncomment the following :
     #line 772 
     #self.att_conv33_13 = AugmentedConv_time(in_channels=dim_out[0], out_channels=dim_out[0], kernel_size=3, dk=40, dv=4, Nh=4,relative=True,stride=1, shape=image_size)
@@ -188,3 +188,13 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     #/slowfast/models/video_model_builder.py
     #line 425
     showMap 改成 1
+    
+## Use discriminator
+    #confire uncomment line 503 
+    if imgType == 'IR' :
+        x = self.s1Night(x)
+    else :
+       x = self.s1Daytime(x)
+    
+    #confire comment line 508 
+    #x = self.s1(x)
