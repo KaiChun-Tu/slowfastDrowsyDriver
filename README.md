@@ -40,6 +40,6 @@ If you encounter any problems during installation, you can consult the origin sl
 * FairScale: pip install 'git+https://github.com/facebookresearch/fairscale'  
 
 ## Build
-    git clone https://github.com/KaiChun-Tu/Development-of-nighttime-fatigue-driving-detection-technology-using-infrared-images
-    cd SlowFast
+    git clone https://github.com/KaiChun-Tu/-Development-of-nighttime-fatigue-driving-detection-technology-using-infrared-images.git
+    cd slowfastDrowsyDriver
     python setup.py build develop
