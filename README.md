@@ -2,7 +2,7 @@
 ## Inroduction
 This project discusses the nighttime IR image fatigue driving detection based on slowfast, in the following will describe how this project work, what and how dataset is used.
 
-##Abstract
+## Abstract
 Traffic safety accidents are one of the top ten causes of death, with fatigue
 driving accounting for a large proportion of them. Fatigue can cause reduced
 concentration and reaction speed, and there are many occupations that often
@@ -15,4 +15,5 @@ reminder to avoid accidents.
 Therefore, this paper collects a series of IR images in the car at night and
 annotates them according to the format of Kinectis data set.
 
-##Installation
+## Installation
+If you encounter any problems during installation, you can consult the origin slowfast https://github.com/facebookresearch/SlowFast.
