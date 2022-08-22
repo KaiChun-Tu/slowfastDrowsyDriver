@@ -85,7 +85,34 @@ YawDD Dataset
 * Clip folder：YawDD_clip 
 
 # Weight
-The weight is in https://turing.DSmyNAS.com:5001/sharing/oWmmkgpzy
-Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/slowfastDrowsyDriver/blob/main/README.md#code) below1
+The weight is in https://turing.DSmyNAS.com:5001/sharing/oWmmkgpzy  
+Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/slowfastDrowsyDriver/blob/main/README.md#code) below.
 
+## Our dataset
+* AttentionAugmented - Spatial attention using AttentionAugmented - for nighttime images
+* CBAM - Using Unbalanced LocalCNNs for Spatial Attention, Channel Attention Convolution in Unbalanced LocalCNNs Using Channel Attention Convolution in CBAM - for nighttime imagery
+* CoordinateAttention - Using Unbalanced LocalCNNs for spatial attention, and channel attention convolution in Unbalanced LocalCNNs using CoordinateAttention - for nighttime imagery
+* SEBlock - Spatial attention using Unbalanced LocalCNNs, channel attention convolution in Unbalanced LocalCNNs using SE Block - for nighttime images
+* ECADaytime - Spatial attention using Unbalanced LocalCNNs and channel attention convolution in Unbalanced LocalCNNs using ECA - for daytime images
+* ECANight - Spatial Attention Using Unbalanced LocalCNNs, Channel Attention Convolution in Unbalanced LocalCNNs Using ECA - For Nighttime Imagery
+* LocalCNNsDaytime - Using LocalCNNs for spatial attention, channel attention convolution in Unbalanced LocalCNNs using LocalCNNs - for daytime images
+* LocalCNNsNight - Using LocalCNNs for spatial attention, channel attention convolution in Unbalanced LocalCNNs using LocalCNNs - for nighttime images
+* SlowfastDaytime - The original Slowfast - for daytime images
+* SlowfastNight - The original Slowfast - for nighttime images
+
+## DDDD dataset
+* ECADaytime - Spatial attention using Unbalanced LocalCNNs and channel attention convolution in Unbalanced LocalCNNs using ECA - for daytime images
+* ECANight - Spatial Attention Using Unbalanced LocalCNNs, Channel Attention Convolution in Unbalanced LocalCNNs Using ECA - For Nighttime images
+
+## YawDD dataset
+* ECA - Spatial attention using Unbalanced LocalCNNs, channel attention convolution in Unbalanced LocalCNNs using ECA
+
+# Command
+## Train
+    python tools/run_net.py \
+    --cfg configs/Kinetics/SLOWFAST_8x8_R50.yaml \
+    DATA.PATH_TO_DATA_DIR /home/rvl/data/drowsy_kinectics/new_night \
+    NUM_GPUS 1 \
+    TRAIN.BATCH_SIZE 12
+    
 # Code
