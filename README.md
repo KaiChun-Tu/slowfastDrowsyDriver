@@ -53,7 +53,7 @@ Each dataset has two folders.
 ## Dataset Name  
 Our night dataset  
 * CSV folder：new_night  
-* Clip folder：clip  
+* Clip folder：clip
 Our dynamic night dataset  
 * CSV folder：dynamicNight  
 * Clip folder：dynamicNight_clip  
