@@ -189,7 +189,7 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     #line 425
     showMap 改成 1
     
-## Use discriminator
+## Run the weight of discriminator1
     #confire uncomment line 503 
     if imgType == 'IR' :
         x = self.s1Night(x)
