@@ -43,3 +43,17 @@ If you encounter any problems during installation, you can consult the origin sl
     git clone https://github.com/KaiChun-Tu/-Development-of-nighttime-fatigue-driving-detection-technology-using-infrared-images.git
     cd slowfastDrowsyDriver
     python setup.py build develop
+    
+# Dataset
+## format 
+The dataset is annotates in Kinetics format.  
+Each dataset has two folders.  
+* CSV folder: Contains three csv files, namely train, val, and test, which record the absolute path and category of each data.
+* Clip folder: a folder that stores each data, each folder contains eight images and video files of the data
+## Dataset Name  
+Our night dataset  
+* CSV folder：new_night  
+* Clip folder：clip  
+Our dynamic night dataset  
+* CSV folder：dynamicNight  
+* Clip folder：dynamicNight_clip  
