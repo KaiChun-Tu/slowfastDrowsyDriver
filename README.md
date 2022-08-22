@@ -38,3 +38,8 @@ moviepy: (optional, for visualizing video on tensorboard) conda install -c conda
 PyTorchVideo: pip install pytorchvideo  
 Detectron2:  
 FairScale: pip install 'git+https://github.com/facebookresearch/fairscale'  
+
+## Build
+git clone https://github.com/KaiChun-Tu/Development-of-nighttime-fatigue-driving-detection-technology-using-infrared-images
+cd SlowFast
+python setup.py build develop
