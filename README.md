@@ -114,5 +114,77 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     DATA.PATH_TO_DATA_DIR /home/rvl/data/drowsy_kinectics/new_night \
     NUM_GPUS 1 \
     TRAIN.BATCH_SIZE 12
+ 
+## Test
+    python tools/run_net.py \
+      --cfg configs/Kinetics/SLOWFAST_8x8_R50.yaml \
+      DATA.PATH_TO_DATA_DIR /home/rvl/data/drowsy_kinectics/new_night \
+      TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/slowfast-handOver/Weight/OurDataset/SlowfastNight/best.pyth \
+      TRAIN.ENABLE False
+ 
+## Demo 
+    python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50.yaml \
+    TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/AttentionAugmentation/checkpoint_epoch_00028.pyth
     
 # Code
+## Join LocalCNNs
+    #/slowfast/models/video_model_builder.py
+    #line 198
+    self.LocalCNNs5 = LocalCNNs(2048)
+    
+    #line 470
+    x5 = self.LocalCNNs5(x5) cancel command
+    
+    #comfire 479
+    TimeAveX = x[0]
+    
+    #confire command line 503 
+    #if imgType == 'IR' :
+        #x = self.s1Night(x)
+    #else :
+       # x = self.s1Daytime(x)
+    
+    #confire uncomment line 508 
+    x = self.s1(x)
+    
+## Join Unbalanced LocalCNNs
+    #/slowfast/models/video_model_builder.py
+    #line 196
+    self.LocalCNNs5 = ourLocalCNNs(256)
+    
+    #line 452
+    x5 = self.LocalCNNs5(x5) uncomment
+    
+    #confire line 608
+    TimeAveX = x[1]
+    
+        #confire command line 503 
+    #if imgType == 'IR' :
+        #x = self.s1Night(x)
+    #else :
+       # x = self.s1Daytime(x)
+    
+    #confire uncomment line 508 
+    x = self.s1(x)
+
+## Attention Augmented
+    #/slowfast/models/resnet_helper.py Remember to command locolCNNs or Unbalanced LocalCNNs
+    #uncomment the following :
+    #line 772 
+    #self.att_conv33_13 = AugmentedConv_time(in_channels=dim_out[0], out_channels=dim_out[0], kernel_size=3, dk=40, dv=4, Nh=4,relative=True,stride=1, shape=image_size)
+    #line 865
+    #if pathway == 0:
+    #x = self.att_conv33_13(x)
+    
+## Modify Channel Attention Module
+    #/slowfast/models/video_model_builder.py
+    line 594
+    eca_layer -> ECA
+    SELayer -> se block
+    ChannelAttention ->CBAM
+    CoorAtt -> Coordinate Attention
+    
+## show Attention Map
+    #/slowfast/models/video_model_builder.py
+    #line 425
+    showMap 改成 1
