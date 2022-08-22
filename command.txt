@@ -1,0 +1,47 @@
+conda activate newslowfast
+
+
+train
+
+python tools/run_net.py \
+--cfg configs/Kinetics/SLOWFAST_8x8_R50.yaml \
+DATA.PATH_TO_DATA_DIR /home/rvl/Kaichun/slowfastAug/slowfast/dataset \
+NUM_GPUS 1 \
+TRAIN.BATCH_SIZE 12
+
+
+
+test
+python tools/run_net.py \
+  --cfg configs/Kinetics/SLOWFAST_8x8_R50.yaml \
+  DATA.PATH_TO_DATA_DIR /home/rvl/data/drowsy_kinectics/new_total \
+  TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/slowfastFinal/discriminator1/checkpoint_epoch_00065.pyth \
+  TRAIN.ENABLE False 
+
+
+demo
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/AttentionAugmentation/checkpoint_epoch_00028.pyth 
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/ECANet/checkpoint_epoch_00043.pyth 
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/ECADaytime/checkpoint_epoch_00050.pyth 
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/clean/checkpoint_epoch_00020.pyth 
+
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/currentBest0966/checkpoint_epoch_00019.pyth
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50Yaw.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/YawDD_lr_0.1/checkpoint_epoch_00021.pyth
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50DDDD.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/DDDD/checkpoint_epoch_00091.pyth
+
+python tools/run_net.py --cfg demo/Kinetics/SLOWFAST_8x8_R50DDDD.yaml \
+TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/ECADDDDNight/checkpoint_epoch_00090.pyth
