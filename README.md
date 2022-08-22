@@ -46,6 +46,7 @@ If you encounter any problems during installation, you can consult the origin sl
     
 # Dataset
 ## format 
+The dataset in in https://turing.DSmyNAS.com:5001/sharing/DpChhCc8A
 The dataset is annotates in Kinetics format.  
 Each dataset has two folders.  
 * CSV folder: Contains three csv files, namely train, val, and test, which record the absolute path and category of each data.
@@ -63,3 +64,28 @@ Our daytime dataset
 * CSV folder：new_daytime
 * Clip folder：new_daytime_clip
 
+Our dynamic daytime dataset  
+* CSV folder：dynamicDaytime  
+* Clip folder：dynamicDaytime_clip  
+
+Our night and daytime mixing data
+* CSV folder：new_total
+* Clip folder：The csv file points to clip and new_daytime_clip, there is no Clip folder itself.
+
+DDDD night dataset 
+* CSV folder：DDDDNight  
+* Clip folder：DDDDNight_clip  
+
+DDDD daytime dataset 
+* CSV folder：DDDDDaytime  
+* Clip folder：DDDDRGB_clip  
+
+YawDD Dataset
+* CSV folder：YawDD  
+* Clip folder：YawDD_clip 
+
+#Weight
+The weight is in https://turing.DSmyNAS.com:5001/sharing/oWmmkgpzy
+Please modify the code according to the > Code below
+
+#Code
