@@ -127,6 +127,11 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
     TEST.CHECKPOINT_FILE_PATH /home/rvl/KaiChun/SlowFast-main/AttentionAugmentation/checkpoint_epoch_00028.pyth
     
 # Code
+##Modify image type GT generate
+    #/slowfast/datasets/decoder.py
+    #line291
+    Please adjust the image type judgment according to your image path
+
 ## Join LocalCNNs
     #/slowfast/models/video_model_builder.py
     #line 198
