@@ -107,7 +107,7 @@ Please modify the code according to the [> Code](https://github.com/KaiChun-Tu/s
 ## YawDD dataset
 * ECA - Spatial attention using Unbalanced LocalCNNs, channel attention convolution in Unbalanced LocalCNNs using ECA
 
-# Commend
+# Commnd
 ## Train
     python tools/run_net.py \
     --cfg configs/Kinetics/SLOWFAST_8x8_R50.yaml \
